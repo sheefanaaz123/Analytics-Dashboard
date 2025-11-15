@@ -1,4 +1,4 @@
-import React, { createContext, useMemo, useState, ReactNode } from "react";
+import { createContext, useMemo, useState, type ReactNode } from "react";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 
 // Context interface

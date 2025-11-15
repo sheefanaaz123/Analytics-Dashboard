@@ -1,4 +1,4 @@
-import React, { ReactNode } from "react";
+import { type ReactNode } from "react";
 import { AppBar, Toolbar, Typography, Box, Container } from "@mui/material";
 import ThemeColorSelector from "../components/ThemeColorSelector";
 
