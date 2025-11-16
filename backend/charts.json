@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "chartName": "My Chart 1",
+    "chartType": "bar",
+    "labels": [
+      "abble",
+      "mango"
+    ],
+    "values": [
+      20,
+      50
+    ],
+    "createdAt": "2025-11-16T16:45:32.590801"
+  }
+]

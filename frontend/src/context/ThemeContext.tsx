@@ -23,7 +23,7 @@ interface Props {
 }
 
 export const CustomThemeProvider = ({ children }: Props) => {
-  const [mode, setMode] = useState<"light" | "dark">("dark");
+  const [mode, setMode] = useState<"light" | "dark">("light");
   const [primaryColor, setPrimaryColor] = useState("#1976d2"); // default blue
 
   const toggleTheme = () => setMode(prev => (prev === "light" ? "dark" : "light"));
