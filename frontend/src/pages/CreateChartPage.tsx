@@ -1,6 +1,7 @@
 import { useState } from "react";
 import * as echarts from "echarts";
 import { Box, TextField, Button, Select, MenuItem } from "@mui/material";
+import { API_BASE } from "../api";
 
 export const CreateChartPage = () => {
   const [chartName, setChartName] = useState("");
@@ -39,7 +40,7 @@ export const CreateChartPage = () => {
   };
 
   const saveChart = async () => {
-    const response = await fetch("http://127.0.0.1:5000/save-chart", {
+    const response = await fetch(`${API_BASE}/save-chart`,{
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({

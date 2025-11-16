@@ -1,11 +1,12 @@
 import { useEffect, useState } from "react";
 import { Box, Card, CardContent, Typography, Button } from "@mui/material";
+import { API_BASE } from "../api";
 
 export const ChartListPage = () => {
   const [charts, setCharts] = useState([]);
 
   useEffect(() => {
-    fetch("http://127.0.0.1:5000/charts")
+    fetch(`${API_BASE}/charts`)
       .then((res) => res.json())
       .then((data) => setCharts(data))
       .catch((err) => console.error(err));
