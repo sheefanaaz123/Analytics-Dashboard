@@ -43,7 +43,7 @@ Fully responsive, production-ready, and deployed on **Render** (Frontend + Backe
 - MUI  
 - ECharts  
 - Axios  
-- Vite (if used)  
+- Vite
 
 ### **Backend**
 -Python
