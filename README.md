@@ -30,7 +30,7 @@ Fully responsive, production-ready, and deployed on **Render** (Frontend + Backe
 - 🔁 Real-time data fetching from backend API  
 
 ### **Backend**
-- 🔧 Built using **Node.js + Express**  
+- 🔧 Built using **Python + Flask**  
 - 📡 REST APIs for analytics data  
 - 🔐 CORS-enabled secure communication  
 - ⚙️ Configurable endpoints for future scalability  
