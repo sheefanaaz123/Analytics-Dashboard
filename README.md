@@ -46,55 +46,7 @@ Fully responsive, production-ready, and deployed on **Render** (Frontend + Backe
 - Vite (if used)  
 
 ### **Backend**
-- Node.js  
-- Express  
-- CORS  
-- Nodemon (dev)  
-
----
-
-## ⚙️ Installation & Local Setup  
-
-### **1. Clone the repository**
-```bash
-git clone https://github.com/sheefanaaz123/Analytics-Dashboard.git
-cd Analytics-Dashboard
-2. Setup Frontend
-bash
-Copy code
-cd frontend
-npm install
-npm run dev
-3. Setup Backend
-bash
-Copy code
-cd backend
-npm install
-npm start
-🧪 API Endpoints
-Method	Endpoint	Description
-GET	/api/stats	Fetch analytics stats
-GET	/api/chart-data	Fetch chart dataset
-GET	/api/users	Fetch user analytics
-
-🌩 Deployment (Render)
-Frontend
-Build command: npm run build
-
-Publish directory: dist/
-
-Backend
-Start command: node server.js
-
-Environment: Node 18+
-
-🧑‍💻 Author
-Sheefu – Frontend Engineer
-🚀 Passionate about building clean, scalable UI and data-driven dashboards.
-🔗 GitHub: https://github.com/sheefanaaz123
-
-⭐ If you like this project
-Give it a star ⭐ on GitHub — it helps the project grow!
+-Python
+-Flask
 
 
-I can add anything.
