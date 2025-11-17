@@ -36,31 +36,6 @@ Fully responsive, production-ready, and deployed on **Render** (Frontend + Backe
 - ⚙️ Configurable endpoints for future scalability  
 - 🚀 Deployed on Render with auto-build  
 
----
-
-## 📁 Folder Structure  
-Analytics-Dashboard/
-│── frontend/
-│ ├── src/
-│ │ ├── components/
-│ │ ├── pages/
-│ │ ├── hooks/
-│ │ ├── theme/
-│ │ └── utils/
-│ └── public/
-│
-└── backend/
-├── src/
-│ ├── routes/
-│ ├── controllers/
-│ └── data/
-└── server.js
-
-yaml
-Copy code
-
----
-
 ## 🛠️ Technologies Used  
 ### **Frontend**
 - React  
