@@ -1,9 +1,9 @@
 import { useNavigate } from "react-router-dom";
 import { Header } from "../components/Header";
 import { styled, Box, Typography, Card, Button } from "@mui/material";
-import BarChartIcon from "@mui/icons-material/BarChart";
-import AddChartIcon from "@mui/icons-material/AddChart";
-import InsightsIcon from "@mui/icons-material/Insights";
+import BarChartIcon from '@mui/icons-material/BarChart';
+import AddchartIcon from '@mui/icons-material/Addchart';
+import InsightsIcon from '@mui/icons-material/Insights';
 import { pxToRem } from "../components/utils";
 
 const HomeWrapper = styled(Box)(() => ({
@@ -62,7 +62,7 @@ export const HomePage = () => {
           </ActionCard>
 
           <ActionCard onClick={() => navigate("/create-chart")}>
-            <AddChartIcon fontSize="large" color="primary" />
+            <AddchartIcon fontSize="large" color="primary" />
             <Typography variant="h6">Create Chart</Typography>
             <Typography variant="body2" color="text.secondary" textAlign="center">
               Build new charts from your own data. Choose chart types, labels, and
