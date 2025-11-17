@@ -1,6 +1,7 @@
-import { useContext } from "react";
+import { useState, useContext } from "react";
 import { ThemeContext } from "../context/ThemeContext";
-import { FormControl, Select, MenuItem, InputLabel } from "@mui/material";
+import { IconButton, Menu, MenuItem, Box, Typography } from "@mui/material";
+import PaletteIcon from "@mui/icons-material/Palette";
 
 const colors = [
   { name: "Blue", value: "#1976d2" },
@@ -10,23 +11,59 @@ const colors = [
   { name: "Purple", value: "#6a1b9a" },
 ];
 
-const ThemeColorSelector = () => {
-  const { primaryColor, setPrimaryColor } = useContext(ThemeContext);
+const ThemeMenu = () => {
+  const { setPrimaryColor } = useContext(ThemeContext);
+  const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
+  const open = Boolean(anchorEl);
+
+  const handleClick = (event: React.MouseEvent<HTMLElement>) => {
+    setAnchorEl(event.currentTarget);
+  };
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
 
   return (
-    <FormControl size="small">
-      <InputLabel>Primary Color</InputLabel>
-      <Select
-        value={primaryColor}
-        onChange={(e) => setPrimaryColor(e.target.value)}
-        label="Primary Color"
+    <>
+      <IconButton onClick={handleClick} color="inherit">
+        <PaletteIcon />
+      </IconButton>
+
+      <Menu
+        anchorEl={anchorEl}
+        open={open}
+        onClose={handleClose}
+        PaperProps={{
+          sx: { padding: 1, minWidth: 200 },
+        }}
       >
-        {colors.map(c => (
-          <MenuItem key={c.value} value={c.value}>{c.name}</MenuItem>
+        <Typography variant="subtitle1" sx={{ px: 1, py: 0.5 }}>
+          Theme Colors
+        </Typography>
+
+        {colors.map((c) => (
+          <MenuItem
+            key={c.value}
+            onClick={() => {
+              setPrimaryColor(c.value);
+              handleClose();
+            }}
+          >
+            <Box
+              sx={{
+                width: 16,
+                height: 16,
+                backgroundColor: c.value,
+                borderRadius: "50%",
+                marginRight: 1,
+              }}
+            />
+            <Typography>{c.name}</Typography>
+          </MenuItem>
         ))}
-      </Select>
-    </FormControl>
+      </Menu>
+    </>
   );
 };
 
-export default ThemeColorSelector;
+export default ThemeMenu;

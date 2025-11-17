@@ -2,6 +2,7 @@ import { useState } from "react";
 import * as echarts from "echarts";
 import { Box, TextField, Button, Select, MenuItem } from "@mui/material";
 import { API_BASE } from "../api";
+import { pxToRem } from "../components/utils";
 
 export const CreateChartPage = () => {
   const [chartName, setChartName] = useState("");
@@ -11,7 +12,10 @@ export const CreateChartPage = () => {
 
   const renderChart = () => {
     const dom = document.getElementById("chart-preview");
-    const chart = echarts.init(dom);
+    const chart = echarts.init(dom, undefined, { 
+  width: dom?.clientWidth, 
+  height: dom?.clientHeight 
+});
 
     const labelArray = labels.split(",").map((i) => i.trim());
     const valueArray = values.split(",").map((i) => Number(i));
@@ -57,10 +61,11 @@ export const CreateChartPage = () => {
   };
 
   return (
-    <Box padding={3}>
-      <h2>Create Your Chart</h2>
+    <>
+    <div style={{display: "grid", gridTemplateColumns:"30% 70%", height:`calc(100vh - ${pxToRem(64)})`, padding: pxToRem(16) }}>
 
-      <Box display="flex" flexDirection="column" gap={2} width="350px">
+
+      <Box display="flex" flexDirection="column" justifyContent="content" gap={2} margin="auto 0" paddingRight={pxToRem(16)}>
         <TextField
           label="Chart Name"
           value={chartName}
@@ -93,14 +98,16 @@ export const CreateChartPage = () => {
           Save Chart
         </Button>
 
-      </Box>
+  </Box>
+
 
       <Box
         id="chart-preview"
-        height="400px"
-        marginTop={4}
+        marginTop={pxToRem(16)}
         border="1px solid #ccc"
       />
-    </Box>
+    </div>
+    </>
   );
-};
+}
+
