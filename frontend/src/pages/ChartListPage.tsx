@@ -53,18 +53,18 @@ export const ChartListPage = () => {
       sortable: false,
       renderCell: (params) => (
         <>
-        <Button
-          variant="outlined"
-          color="error"
-          size="small"
-          onClick={() => {
-            if (confirm("Are you sure you want to delete this chart?")) {
-              handleDelete(params.row.id);
-            }
-          }}
-        >
-          Delete
-        </Button>
+          <Button
+            variant="outlined"
+            color="error"
+            size="small"
+            onClick={() => {
+              if (confirm("Are you sure you want to delete this chart?")) {
+                handleDelete(params.row.id);
+              }
+            }}
+          >
+            Delete
+          </Button>
         </>
       ),
     },

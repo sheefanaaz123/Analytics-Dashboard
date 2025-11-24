@@ -1,4 +1,10 @@
-import { createContext, useMemo, useState, useEffect, type ReactNode } from "react";
+import {
+  createContext,
+  useMemo,
+  useState,
+  useEffect,
+  type ReactNode,
+} from "react";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 
 interface ThemeContextProps {
@@ -20,13 +26,12 @@ interface Props {
 }
 
 export const CustomThemeProvider = ({ children }: Props) => {
-
   const [mode, setMode] = useState<"light" | "dark">(
-    (localStorage.getItem("themeMode") as "light" | "dark") || "light"
+    (localStorage.getItem("themeMode") as "light" | "dark") || "light",
   );
 
   const [primaryColor, setPrimaryColor] = useState(
-    localStorage.getItem("primaryColor") || "#1976d2"
+    localStorage.getItem("primaryColor") || "#1976d2",
   );
 
   useEffect(() => {
@@ -48,7 +53,7 @@ export const CustomThemeProvider = ({ children }: Props) => {
           primary: { main: primaryColor },
         },
       }),
-    [mode, primaryColor]
+    [mode, primaryColor],
   );
 
   return (

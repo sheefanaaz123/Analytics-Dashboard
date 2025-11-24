@@ -1,1 +1,1 @@
-export const API_BASE = "https://analytics-80al.onrender.com";
+export const API_BASE = "http://127.0.0.1:5000";

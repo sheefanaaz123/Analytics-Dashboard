@@ -56,7 +56,10 @@ const StyledDataGrid = styled(DataGrid)(({ theme }) => ({
   },
 }));
 
-export default function DataTable(props: { rows: Chart[]; columns: GridColDef[] }) {
+export default function DataTable(props: {
+  rows: Chart[];
+  columns: GridColDef[];
+}) {
   return (
     <Paper
       elevation={3}

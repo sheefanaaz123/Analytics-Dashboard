@@ -1,9 +1,9 @@
 import { useNavigate } from "react-router-dom";
 import { Header } from "../components/Header";
 import { styled, Box, Typography, Card, Button } from "@mui/material";
-import BarChartIcon from '@mui/icons-material/BarChart';
-import AddchartIcon from '@mui/icons-material/Addchart';
-import InsightsIcon from '@mui/icons-material/Insights';
+import BarChartIcon from "@mui/icons-material/BarChart";
+import AddchartIcon from "@mui/icons-material/Addchart";
+import InsightsIcon from "@mui/icons-material/Insights";
 import { pxToRem } from "../components/utils";
 
 const HomeWrapper = styled(Box)(() => ({
@@ -35,7 +35,7 @@ export const HomePage = () => {
 
   return (
     <>
-      <Header/>
+      <Header />
 
       <HomeWrapper>
         <Box textAlign="center" maxWidth={pxToRem(600)}>
@@ -43,18 +43,28 @@ export const HomePage = () => {
             Analytics Dashboard
           </Typography>
           <Typography variant="h6" color="text.secondary">
-            Create, visualize, and manage charts with ease. Whether you’re tracking
-            sales, website traffic, or custom datasets, this dashboard empowers
-            you to gain insights in a few clicks.
+            Create, visualize, and manage charts with ease. Whether you’re
+            tracking sales, website traffic, or custom datasets, this dashboard
+            empowers you to gain insights in a few clicks.
           </Typography>
         </Box>
 
-        <Box display="flex" gap={pxToRem(24)} flexWrap="wrap" justifyContent="center">
+        <Box
+          display="flex"
+          gap={pxToRem(24)}
+          flexWrap="wrap"
+          justifyContent="center"
+        >
           <ActionCard onClick={() => navigate("/charts")}>
             <BarChartIcon fontSize="large" color="primary" />
             <Typography variant="h6">View Charts</Typography>
-            <Typography variant="body2" color="text.secondary" textAlign="center">
-              Browse all your saved charts and gain insights from historical data.
+            <Typography
+              variant="body2"
+              color="text.secondary"
+              textAlign="center"
+            >
+              Now you can access your charts. Browse all your saved charts and
+              gain insights from historical data.
             </Typography>
             <Button variant="contained" size="small" sx={{ mt: 1 }}>
               Go to Charts
@@ -64,8 +74,12 @@ export const HomePage = () => {
           <ActionCard onClick={() => navigate("/create-chart")}>
             <AddchartIcon fontSize="large" color="primary" />
             <Typography variant="h6">Create Chart</Typography>
-            <Typography variant="body2" color="text.secondary" textAlign="center">
-              Build new charts from your own data. Choose chart types, labels, and
+            <Typography
+              variant="body2"
+              color="text.secondary"
+              textAlign="center"
+            >
+              Build charts from your own data. Choose chart types, labels, and
               values to visualize trends instantly.
             </Typography>
             <Button variant="contained" size="small" sx={{ mt: 1 }}>
@@ -76,9 +90,13 @@ export const HomePage = () => {
           <ActionCard>
             <InsightsIcon fontSize="large" color="primary" />
             <Typography variant="h6">Create Dashboard</Typography>
-            <Typography variant="body2" color="text.secondary" textAlign="center">
-              Combine multiple charts into custom dashboards. Arrange, resize, and configure
-              widgets to visualize your data in one place.
+            <Typography
+              variant="body2"
+              color="text.secondary"
+              textAlign="center"
+            >
+              Combine multiple charts into custom dashboards. Arrange, resize,
+              and configure widgets to visualize your data in one place.
             </Typography>
             <Button variant="contained" size="small" sx={{ mt: 1 }} disabled>
               Coming Soon
